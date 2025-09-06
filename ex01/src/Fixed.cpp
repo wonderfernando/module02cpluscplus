@@ -38,7 +38,6 @@ std::ostream &operator<<(std::ostream& os, const Fixed &other)
     return os;
 }
 
-
 int Fixed::getRawBits() const {
     std::cout << "getRawBits member function called" << std::endl;    
     return  fixed_point;
@@ -46,14 +45,14 @@ int Fixed::getRawBits() const {
 
 void Fixed::setRawBits(int raw)
 {
-    fixed_point = raw;
+    this.fixed_point = raw;
 }
 
 Fixed &Fixed::operator=(const Fixed &other){
     std::cout << "Copy assignment operator called" << std::endl;  
     if (this == &other)
         return *this;
-    fixed_point = other.fixed_point;
+    this.fixed_point = other.fixed_point;
     return *this;
 }
 
