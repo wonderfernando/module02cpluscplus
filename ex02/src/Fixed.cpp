@@ -94,13 +94,13 @@ Fixed Fixed::operator-(const Fixed& other) {
 
 Fixed Fixed::operator*(const Fixed& other) {
     float mult = other.toFloat() * this->toFloat();
-    return Fixed(sum);
+    return Fixed(mult);
 }
 
 Fixed Fixed::operator/(const Fixed& other) {
     if (other.toInt() == 0)
         return Fixed(0);
-    float div = this->toFloat() / other.toFloat()
+    float div = this->toFloat() / other.toFloat();
     return Fixed(div);
 }
 
